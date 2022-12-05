@@ -13,22 +13,19 @@ fn main() {
     let instructions= &input.lines().collect::<Vec<_>>()[i+2..];
     let stack_count = (initial[0].len()+1)/4;
     let mut stacks : Vec<Vec<char>> = Vec::new();
-    let mut stacks2 : Vec<Vec<char>> = Vec::new();
     for _ in 0..stack_count{
         let empty_stack : Vec<char> = Vec::new();
-        let empty_stack2 : Vec<char> = Vec::new();
         stacks.push(empty_stack);
-        stacks2.push(empty_stack2);
     }
     for line in initial.iter().rev(){
         for stack in 0..stack_count{
             let item = line.chars().nth(stack*4+1).unwrap();
             if item != ' '{
                 stacks[stack].push(item);
-                stacks2[stack].push(item);
             }
         }
     }
+    let mut stacks2 = stacks.clone();
     for line in instructions{
         let words = line.split(" ").collect::<Vec<_>>();
         let mut holding: Vec<char> = Vec::new();
