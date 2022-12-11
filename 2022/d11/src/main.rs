@@ -105,10 +105,10 @@ fn main() {
             monkey_list[x].items = vec![];
         }
     }
-    part1= vec![];
+    let mut part2= vec![];
     for x in monkey_list{
-        part1.push(x.business);
+        part2.push(x.business);
     }
-    part1.sort();
-    print!("{:?}",part1[part1.len()-2]*part1[part1.len()-1]);
+    part2.sort();
+    println!("{:?}",part2[part2.len()-2]*part2[part2.len()-1]);
 }
