@@ -133,19 +133,4 @@ fn main() {
             }
         }
     }
-    // println!("{:?}",input);
-    // for x in &distance_map{
-    //     for y in x{
-    //         print!("{:03} ",y);
-    //     }
-    //     println!();
-    // }
-    // for x in &height_map{
-    //     for y in x{
-    //         print!("{:02} ",y);
-    //     }
-    //     println!();
-    // }
-    // println!("{:?}",start);
-    // println!("{:?}",end);
 }
