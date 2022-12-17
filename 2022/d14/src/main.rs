@@ -34,7 +34,7 @@ fn print_filled(filled: &HashSet<(i32,i32)>, initial_filled: &HashSet<(i32, i32)
 fn main() {
     let input = read_to_string("input.txt").expect("No File");
     let mut filled: HashSet<(i32,i32)> = HashSet::new();
-    let lines:Vec<Vec<Vec<i32>>> = input.split("\r\n").map(|x| x.split(" -> ")
+    let lines:Vec<Vec<Vec<i32>>> = input.lines().map(|x| x.split(" -> ")
         .map(|x| x.split(",")
             .map(|x| x.parse::<i32>().unwrap())
                 .collect()).collect()).collect();
