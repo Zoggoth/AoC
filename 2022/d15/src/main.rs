@@ -41,7 +41,33 @@ fn main() {
         start = min(start,empty_regions[i].0);
         end = max(end,empty_regions[i].1);
     }
+    let elapsed = now.elapsed();
+    println!("Elapsed: {:.2?}", elapsed);
     let part1 = end-start+1-relevant_beacons.len() as i32;
+    // for i in 0..4000000{
+    //     empty_regions = vec![];
+    //     for ((x1, y1), (x2, y2)) in &sb_pairs {
+    //         let distance_to_relevant = (y1 - i).abs();
+    //         let distance_to_beacon = (x1 - x2).abs() + (y1 - y2).abs();
+    //         let slack = distance_to_beacon - distance_to_relevant;
+    //         if x1 - slack <= x1 + slack {
+    //             empty_regions.push((x1 - slack, x1 + slack));
+    //         }
+    //     }
+    //     empty_regions.sort();
+    //     let mut end = empty_regions[0].1;
+    //     for j in 1..empty_regions.len(){
+    //         if end >= empty_regions[j].0{
+    //             end = max(end,empty_regions[j].1)
+    //         }
+    //         else{
+    //             println!("{}",i);
+    //             println!("{}",end+1)
+    //         }
+    //     }
+    // }
+    let elapsed = now.elapsed();
+    println!("Elapsed: {:.2?}", elapsed);
     let mut left_plus_right = 0;
     let mut left_minus_right = 0;
     for i in 0..sb_pairs.len()-1{
